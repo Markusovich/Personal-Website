@@ -1,26 +1,21 @@
 			body {
-    		margin: 60px auto;
-    		width: 70%;
+    		margin: auto;
         background: url(wallpaper.jpg) no-repeat center center fixed;
         background-size: cover;
 			}
-			nav ul, footer ul {
-   			font-family:'Helvetica', 'Arial', 'Sans-Serif';
-   	 		padding: 0px;
-   	 		list-style: none;
-  	  	font-weight: bold;
-				color: gray;
-			}
-			footer ul li {
-    		display: inline;
-    		margin-right: 5px;
-				color: gray;
+			header {
 				text-align: center;
+			}
+			header nav ul {
+   			font-family:'Helvetica', 'Arial', 'Sans-Serif';
+   	 		padding: 30px;
+				margin: 0px;
+  	  	font-weight: bold;
+				justify-content: space-between;
 			}
 			nav ul li {
     		display: inline;
-    		margin-right: 30px;
-				color: gray;
+				margin: 0px;
 			}
 			a {
    			text-decoration: none;
@@ -30,34 +25,45 @@
 				opacity: 0.5;
 				transition: 0.3s;
 			}
-			h1 {
+			article {
+				width: 80%;
+				margin: auto;
+			}
+			article section aside {
+				float: right;
+			}
+			article section aside img {
+				border-radius: 40px;
+				filter: brightness(140%);
+			}
+			article section aside img:hover {
+				filter: brightness(200%);
+				border-radius: 40px;
+				border: 3px solid white;
+			}
+			article section h1 {
     		font-size: 50px;
    		 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
 				color: white;
 			}
-			p {
+			article section p {
    		  font-size: 20px;
    		  line-height: 40px;
    		  color: white;
 				font-family: Tahoma, Geneva, sans-serif;
 			}
 			footer {
-   			border-top: 1px solid gray;
+   			border-top: 1px solid white;
+				margin-top: 80px;
    			font-size: 12px;
 				text-align: center;
 			}
-			aside {
-				float: right;
+			footer ul {
+				text-align: center;
+   			font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  	  	font-weight: bold;
 			}
-			img {
-				border-radius: 40px;
-				filter: brightness(140%);
-			}
-			img:hover {
-				filter: brightness(200%);
-				border-radius: 40px;
-				border: 3px solid white;
-			}
-			header {
-				border-bottom: 1px solid gray;
+			footer ul li {
+    		display: inline;
+    		margin-right: 5px;
 			}
