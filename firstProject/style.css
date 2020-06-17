@@ -7,29 +7,47 @@
 				text-align: center;
 				background-color: transparent;
 				transition: 0.7s;
+				margin: 0px;
 			}
 			header:hover {
 				background-color: black;
-				box-shadow: 0px 10px 15px #000000;
+				box-shadow: 0px 5px 10px #000000;
 			}
 			header nav ul {
    			font-family:'Helvetica', 'Arial', 'Sans-Serif';
    	 		padding: 30px;
 				margin: 0px;
   	  	font-weight: bold;
-				justify-content: space-between;
+  			display: flex;
+  			justify-content: space-evenly;
+			}
+			header nav ul a {
+				text-decoration: none;
+				color: white;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 40px;
+				padding-right: 40px;
+				border-radius: 20px;
+				display: inline-block;
+  			vertical-align: middle;
+  			-webkit-transform: perspective(1px) translateZ(0);
+  			transform: perspective(1px) translateZ(0);
+  			box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  			-webkit-transition-duration: 0.5s;
+  			transition-duration: 0.5s;
+			}
+			header nav ul a:hover {
+				filter: brightness(500%);
+				transition: 0.3s;
+  			-webkit-transform: scale(1.2);
+  			transform: scale(1.2);
+  			-webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  			transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 			}
 			nav ul li {
     		display: inline;
 				margin: 0px;
-			}
-			a {
-   			text-decoration: none;
-				color: white;
-			}
-			a:hover {
-				opacity: 0.5;
-				transition: 0.3s;
 			}
 			article {
 				width: 80%;
@@ -52,6 +70,14 @@
    		  color: white;
 				font-family: Tahoma, Geneva, sans-serif;
 			}
+			article section div nav a{
+				color: white;
+				text-decoration: none;
+			}
+			article section div nav a:hover{
+				opacity: 0.5;
+				transition: 0.3s;
+			}
 			footer {
    			border-top: 1px solid white;
 				margin-right: 10%;
@@ -68,4 +94,12 @@
 			footer ul li {
     		display: inline;
     		margin-right: 5px;
+			}
+			footer ul a {
+   			text-decoration: none;
+				color: white;
+			}
+			footer ul a:hover {
+				opacity: 0.5;
+				transition: 0.3s;
 			}
