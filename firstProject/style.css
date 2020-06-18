@@ -4,18 +4,15 @@
         background-size: cover;
 			}
 			header {
-				text-align: center;
-				background-color: transparent;
 				transition: 0.7s;
-				margin: 0px;
 			}
 			header:hover {
 				background-color: black;
-				box-shadow: 0px 5px 10px #000000;
+				box-shadow: 0px 5px 10px black;
 			}
 			header nav ul {
    			font-family:'Helvetica', 'Arial', 'Sans-Serif';
-   	 		padding: 30px;
+   	 		padding: 20px;
 				margin: 0px;
   	  	font-weight: bold;
   			display: flex;
@@ -24,30 +21,25 @@
 			header nav ul a {
 				text-decoration: none;
 				color: white;
-				padding-top: 15px;
-				padding-bottom: 15px;
-				padding-left: 40px;
-				padding-right: 40px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 35px;
+				padding-right: 35px;
 				border-radius: 20px;
-				display: inline-block;
-  			vertical-align: middle;
+
   			-webkit-transform: perspective(1px) translateZ(0);
   			transform: perspective(1px) translateZ(0);
   			box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   			-webkit-transition-duration: 0.5s;
   			transition-duration: 0.5s;
+
 			}
 			header nav ul a:hover {
 				filter: brightness(500%);
 				transition: 0.3s;
-  			-webkit-transform: scale(1.2);
-  			transform: scale(1.2);
-  			-webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-  			transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 			}
-			nav ul li {
+			header nav ul li {
     		display: inline;
-				margin: 0px;
 			}
 			article {
 				width: 80%;
@@ -60,16 +52,17 @@
 				border-radius: 40px;
 			}
 			article section h1 {
+				color: white;
     		font-size: 50px;
    		 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
-				color: white;
 			}
 			article section p {
+				color: white;
    		  font-size: 20px;
-   		  line-height: 40px;
-   		  color: white;
 				font-family: Tahoma, Geneva, sans-serif;
+   		  line-height: 40px;
 			}
+
 			article section div nav a{
 				color: white;
 				text-decoration: none;
@@ -78,22 +71,22 @@
 				opacity: 0.5;
 				transition: 0.3s;
 			}
+
 			footer {
    			border-top: 1px solid white;
-				margin-right: 10%;
-				margin-left: 10%;
-				margin-top: 100px;
-   			font-size: 12px;
-				text-align: center;
+				width: 80%;
+				margin: auto;
 			}
 			footer ul {
 				text-align: center;
-   			font-family:'Helvetica', 'Arial', 'Sans-Serif';
-  	  	font-weight: bold;
 			}
 			footer ul li {
     		display: inline;
-    		margin-right: 5px;
+    		margin-right: 2px;
+				margin-left: 2px;
+				font-size: 12px;
+				font-weight: bold;
+				font-family:'Helvetica', 'Arial', 'Sans-Serif';
 			}
 			footer ul a {
    			text-decoration: none;
