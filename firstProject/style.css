@@ -62,6 +62,12 @@
 				font-family: Tahoma, Geneva, sans-serif;
    		  line-height: 40px;
 			}
+			article section.resume div p{
+				color: white;
+   		  font-size: 20px;
+				font-family: Tahoma, Geneva, sans-serif;
+   		  line-height: 40px;
+			}
 
 			article section div nav a{
 				color: white;
