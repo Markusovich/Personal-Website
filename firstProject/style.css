@@ -69,13 +69,45 @@
    		  line-height: 40px;
 			}
 
-			article section div nav a{
-				color: white;
-				text-decoration: none;
+			.table{
+				display: table;
+				margin-bottom: 100px;
+				margin-left: 300px;
+				margin-right: 300px;
 			}
-			article section div nav a:hover{
-				opacity: 0.5;
-				transition: 0.3s;
+			.caption{
+				display: table-caption;
+				text-align: center;
+			}
+			.row{
+				display: table-row;
+			}
+			.row *{
+				color: white;
+				border: 1px solid white;
+				display: table-cell;
+				vertical-align: middle;
+				margin-left: auto;
+				margin-right: auto;
+				font-family: Tahoma, Geneva, sans-serif;
+			}
+
+			article section div table{
+				color: white;
+				border: 1px solid white;
+			}
+			article section div table td, th{
+				color: white;
+				border: 1px solid white;
+				padding: 10px;
+				text-align: center;
+			}
+
+			section div figure figcaption{
+				color: white;
+				font-size: 20px;
+				margin-bottom: 10px;
+				font-family: "Comic Sans MS", "cursive", "sans-serif";
 			}
 
 			footer {
