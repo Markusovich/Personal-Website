@@ -5,6 +5,8 @@
 			}
 			header {
 				transition: 0.7s;
+				position: sticky;
+				top: 0;
 			}
 			header:hover {
 				background-color: black;
@@ -69,6 +71,27 @@
    		  line-height: 40px;
 			}
 
+			article section.codeintro div p{
+				text-align: center;
+				padding-top: 1000px;
+			}
+			article section.codeintro div q{
+				font-family:'Helvetica', 'Arial', 'Sans-Serif';
+				font-size: 50px;
+				font-weight: bold;
+			}
+			section.codeintro {
+  			background-image: url("codingbackground.jpeg");
+				box-shadow: 0px 0px 70px 10px;
+
+  			min-height: 2000px;
+
+  			background-attachment: fixed;
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+			}
+
 			.table{
 				display: table;
 				margin-bottom: 100px;
@@ -93,14 +116,27 @@
 			}
 
 			article section div table{
-				color: white;
-				border: 1px solid white;
+				border: 3px solid white;
+				border-radius: 20px;
+				background-image: url(tablepic.jpeg);
+				margin: auto;
+				margin-bottom: 50px;
+				font-family:'Helvetica', 'Arial', 'Sans-Serif';
 			}
 			article section div table td, th{
-				color: white;
-				border: 1px solid white;
+				color: black;
 				padding: 10px;
 				text-align: center;
+			}
+			article section div table td{
+				border: 1px solid white;
+				border-radius: 20px;
+				transition: 0.3s;
+			}
+			article section div table td:hover{
+				border: 3px solid black;
+				font-weight: bold;
+				font-size: 20px;
 			}
 
 			section div figure figcaption{
