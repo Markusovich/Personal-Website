@@ -8,6 +8,12 @@
 		<meta name="keywords" content="Simon, Markus, website, miscellaneous">
 		<meta name="description" content="Simons' personal website and miscellaneous">
 		<link rel="stylesheet" href="style.css">
+		<script>
+			function submitForm() {
+				var msg = document.getElementById("formData");
+				msg.outerHTML = "<h1>Thank You</h1>";
+			}
+		</script>
 	</head>
 
 	<body>
@@ -25,6 +31,23 @@
 		</header>
 
 		<article>
+
+			<section>
+				<form id="formData">
+					<div class="photo">
+						<img src="img-01.png" alt="mailpic">
+					</div>
+					<div class="list">
+						<h3 style="color: black; font-family: Tahoma, Geneva, sans-serif;">Feedback is appreciated :)</h3>
+						<input type="text" id="first" placeholder="First name" required><br> 
+						<input type="text" id="last" placeholder="Last name" required><br>
+						<input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" placeholder="xxx-xxx-xxxx" required><br>
+						<input type="email" id="email" placeholder="Email" required><br><br>
+						<textarea name='comment' id='comment' placeholder="Comments?"></textarea><br>
+						<input class="submitkey" type="button" value="Submit &rarr;" onclick="submitForm();">
+					</div>
+				</form>
+			</section>
 
 			<section>
 				<h1>Music I study to</h1>
