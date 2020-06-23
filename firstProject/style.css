@@ -65,10 +65,12 @@
    		  line-height: 40px;
 			}
 			article section.resume div p{
+				text-align: center;
 				color: white;
    		  font-size: 20px;
 				font-family: Tahoma, Geneva, sans-serif;
    		  line-height: 40px;
+				margin-top: 75px;
 			}
 
 			article section.codeintro div p{
@@ -144,6 +146,56 @@
 				font-size: 20px;
 				margin-bottom: 10px;
 				font-family: "Comic Sans MS", "cursive", "sans-serif";
+			}
+
+			article section form{
+				background-color: white;
+				color: white;
+				border-radius: 10px;
+				padding: 50px;
+				padding-top: 30px;
+				text-align: center;
+				margin: auto;
+				margin-top: 100px;
+				margin-bottom: 100px;
+				width: 70%;
+			}
+			article section form div.photo{
+				float: left;
+				margin-top: 80px;
+			}
+			article section form div.list{
+				padding-left: 350px;
+			}
+			article section form input, textarea{
+				border-radius: 20px;
+				border: none;
+				font-weight: bold;
+				background-color: lightgrey;
+				padding: 10px;
+				margin: 5px;
+				font-family: Tahoma, Geneva, sans-serif;
+				width: 400px;
+				transition: 0.5s;
+				outline:none;
+			}
+			article section form input:hover{
+				width: 450px;
+			}
+			article section form textarea:hover{
+				width: 450px;
+			}
+			article section form textarea{
+				height: 150px;
+			}
+			.submitkey{
+				border-radius: 20px;
+				border: none;
+				background-color: #00a000;
+				padding: 15px;
+				color: white;
+				font-weight: bold;
+				margin: 5px;
 			}
 
 			footer {
