@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Miscellaneous</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Simon Markus">
+		<meta name="keywords" content="Simon, Markus, website, miscellaneous">
+		<meta name="description" content="Simons' personal website and miscellaneous">
+		<link rel="stylesheet" href="style.css">
+		<script>
+		function myFunction() {
+  		var inpObj = document.getElementById("formData");
+  		if (!inpObj.checkValidity()) {
+    		document.getElementById("demo").innerHTML = inpObj.validationMessage;
+  		} else {
+   			alert("Form has successfully submitted.");
+				var msg = document.getElementById("formData");
+				msg.outerHTML = "<h1>Thank you. Your feedback has been recorded :)</h1>";
+  		} 
+		} 
+		</script>
+	</head>
+
+	<body>
+
+		<header>
+			<nav>
+    		<ul>
+					<li><a href="index.htm">Home</a></li>
+					<li><a href="Code.html">Code</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+       		<li><a href="Travel.html">Travel</a></li>
+					<li><a href="Miscellaneous.html" style="border: 3px solid white;">Miscellaneous</a></li>
+    		</ul>
+			</nav>
+		</header>
+
+		<article>
+
+			<section>
+				<form id="formData" method="post">
+					<div class="photo">
+						<img src="img-01.png" alt="mailpic">
+					</div>
+					<div class="list">
+						<h3 style="color: black; font-family: Tahoma, Geneva, sans-serif;">Feedback is appreciated :)</h3>
+						<input type="text" name="first" placeholder="First name" pattern="[a-zA-Z]+" required /><br> 
+						<input type="text" name="last" placeholder="Last name" pattern="[a-zA-Z]+" required /><br>
+						<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" required /><br>
+						<input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br><br>
+						<textarea name='comment' id='comment' placeholder="Comments?"></textarea><br>
+						<input class="submitkey" type="submit" value="Submit &rarr;" onclick="myFunction()">
+					</div>
+				</form>
+			</section>
+
+			<section>
+				<h1>Music I study to</h1>
+					<div class="first">
+						<figure>
+							<figcaption>TrackTribe - Monument</figcaption>
+							<audio autoplay controls loop>
+								<source src="TrackTribe-Monument.mp3" type="audio/mp3">
+							</audio>
+						</figure>
+					</div>
+					<div class="second">
+						<figure>
+							<figcaption>Jernalism - Temptation</figcaption>
+							<audio autoplay controls loop>
+								<source src="Jernalism-Temptation.mp3" type="audio/mp3">
+							</audio>
+						</figure>
+					</div>
+					<div class="third">
+						<figure>
+							<figcaption>Hans Zimmer - Injection</figcaption>
+							<audio autoplay controls loop>
+								<source src="HansZimmer-Injection.mp3" type="audio/mp3">
+							</audio>
+						</figure>
+					</div>
+			</section>
+
+			<section class="videos">
+				<h1>Favorite Videos</h1>
+				<div>
+					<figure class="first">
+						<iframe width="600" height="300" src="https://www.youtube.com/embed/Y_9SwDFd_9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</figure>
+					<figure class="second">
+						<iframe width="600" height="300" src="https://www.youtube.com/embed/k9zTr2MAFRg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</figure>
+				</div>
+			</section>
+
+		</article>
+
+		<footer>
+    	<ul>
+      	<li><a href="mailto:simon.markus@siu.edu" target="_blank">email</a></li>
+				<li style="color:white;">&centerdot;</li>
+        <li><a href="https://github.com/markusovich" target="_blank">github</a></li>
+				<li style="color:white;">&centerdot;</li>
+				<li><a href="https://www.linkedin.com/in/simon-m-857b60190" target="_blank">linkedin</a></li>
+				<li style="color:white;">&centerdot;</li>
+				<li style="color:white; margin: 1px;">&copy; 2020 Simon Markus, SIUC.</li>
+			</ul>
+		</footer>
+	</body>
+
+</html>

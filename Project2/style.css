@@ -1,0 +1,236 @@
+			body {
+    		margin: auto;
+        background: url(wallpaper.jpg) no-repeat center center fixed;
+        background-size: cover;
+			}
+			header {
+				transition: 0.7s;
+				position: sticky;
+				top: 0;
+			}
+			header:hover {
+				background-color: black;
+				box-shadow: 0px 5px 10px black;
+			}
+			header nav ul {
+   			font-family:'Helvetica', 'Arial', 'Sans-Serif';
+   	 		padding: 20px;
+				margin: 0px;
+  	  	font-weight: bold;
+  			display: flex;
+  			justify-content: space-evenly;
+			}
+			header nav ul a {
+				text-decoration: none;
+				color: white;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 35px;
+				padding-right: 35px;
+				border-radius: 20px;
+
+  			-webkit-transform: perspective(1px) translateZ(0);
+  			transform: perspective(1px) translateZ(0);
+  			box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  			-webkit-transition-duration: 0.5s;
+  			transition-duration: 0.5s;
+
+			}
+			header nav ul a:hover {
+				filter: brightness(500%);
+				transition: 0.3s;
+			}
+			header nav ul li {
+    		display: inline;
+			}
+			article {
+				width: 80%;
+				margin: auto;
+			}
+			article section aside {
+				float: right;
+			}
+			article section aside img {
+				border-radius: 40px;
+			}
+			article section h1 {
+				color: white;
+    		font-size: 50px;
+   		 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+			}
+			article section p {
+				color: white;
+   		  font-size: 20px;
+				font-family: Tahoma, Geneva, sans-serif;
+   		  line-height: 40px;
+			}
+			article section.resume div p{
+				text-align: center;
+				color: white;
+   		  font-size: 20px;
+				font-family: Tahoma, Geneva, sans-serif;
+   		  line-height: 40px;
+				margin-top: 75px;
+			}
+
+			article section.codeintro div p{
+				text-align: center;
+				padding-top: 1000px;
+			}
+			article section.codeintro div q{
+				font-family:'Helvetica', 'Arial', 'Sans-Serif';
+				font-size: 50px;
+				font-weight: bold;
+			}
+			section.codeintro {
+  			background-image: url("codingbackground.jpeg");
+				box-shadow: 0px 0px 70px 10px;
+
+  			min-height: 2000px;
+
+  			background-attachment: fixed;
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+			}
+
+			.table{
+				display: table;
+				margin-bottom: 100px;
+				margin-left: 300px;
+				margin-right: 300px;
+			}
+			.caption{
+				display: table-caption;
+				text-align: center;
+			}
+			.row{
+				display: table-row;
+			}
+			.row *{
+				color: white;
+				display: table-cell;
+				vertical-align: middle;
+				margin-left: 10px;
+				margin-bottom: 30px;
+				font-family: Comic Sans MS, Comic Sans, cursive;
+				border-radius: 20px;
+			}
+
+			article section div table{
+				border: 3px solid white;
+				border-radius: 20px;
+				background-image: url(tablepic.jpeg);
+				margin: auto;
+				margin-bottom: 50px;
+				font-family:'Helvetica', 'Arial', 'Sans-Serif';
+			}
+			article section div table td, th{
+				color: black;
+				padding: 10px;
+				text-align: center;
+			}
+			article section div table td{
+				border: 1px solid white;
+				border-radius: 20px;
+				transition: 0.3s;
+			}
+			article section div table td:hover{
+				border: 3px solid black;
+				font-weight: bold;
+				font-size: 20px;
+			}
+
+			section div.second{
+				display: flex;
+				justify-content: center;
+			}
+			section div.third{
+				float: right;
+			}
+			section div figure figcaption{
+				color: white;
+				font-size: 20px;
+				margin-bottom: 10px;
+				font-family: "Comic Sans MS", "cursive", "sans-serif";
+			}
+
+			section.videos {
+				margin-top: 150px;
+			}
+
+			article section form{
+				background-color: white;
+				color: white;
+				border-radius: 10px;
+				padding: 50px;
+				padding-top: 30px;
+				text-align: center;
+				margin: auto;
+				margin-top: 100px;
+				margin-bottom: 100px;
+				width: 70%;
+			}
+			article section form div.photo{
+				float: left;
+				margin-top: 80px;
+			}
+			article section form div.list{
+				padding-left: 350px;
+			}
+			article section form input, textarea{
+				border-radius: 20px;
+				border: none;
+				font-weight: bold;
+				background-color: lightgrey;
+				padding: 10px;
+				margin: 5px;
+				font-family: Tahoma, Geneva, sans-serif;
+				width: 400px;
+				width: 80%;
+				transition: 0.5s;
+				outline:none;
+			}
+			article section form input:hover{
+				width: 450px;
+			}
+			article section form textarea:hover{
+				width: 450px;
+			}
+			article section form textarea{
+				height: 150px;
+			}
+			.submitkey{
+				border-radius: 20px;
+				border: none;
+				background-color: #00a000;
+				padding: 15px;
+				color: white;
+				font-weight: bold;
+				margin: 5px;
+			}
+
+			footer {
+   			border-top: 1px solid white;
+				width: 80%;
+				margin: auto;
+			}
+			footer ul {
+				text-align: center;
+			}
+			footer ul li {
+    		display: inline;
+    		margin-right: 2px;
+				margin-left: 2px;
+				font-size: 12px;
+				font-weight: bold;
+				font-family:'Helvetica', 'Arial', 'Sans-Serif';
+			}
+			footer ul a {
+   			text-decoration: none;
+				color: white;
+			}
+			footer ul a:hover {
+				opacity: 0.5;
+				transition: 0.3s;
+			}
