@@ -9,17 +9,18 @@
 		<meta name="description" content="Simons' personal website and miscellaneous">
 		<link rel="stylesheet" href="style.css">
 		<script>
-		function myFunction() {
-  		var inpObj = document.getElementById("formData");
-  		if (!inpObj.checkValidity()) {
-    		document.getElementById("demo").innerHTML = inpObj.validationMessage;
-  		} else {
+		function submitForm() {
+  		var form = document.getElementById("formData");
+  		if (form.checkValidity() == true) {
    			alert("Form has successfully submitted.");
 				var msg = document.getElementById("formData");
 				msg.outerHTML = "<h1>Thank you. Your feedback has been recorded :)</h1>";
   		} 
 		} 
 		</script>
+		<noscript>
+			<p style="color:white;">This web page uses JavaScript. For proper results,you must use a web browser with JavaScript enabled.</p>
+		</noscript>
 	</head>
 
 	<body>
@@ -45,12 +46,12 @@
 					</div>
 					<div class="list">
 						<h3 style="color: black; font-family: Tahoma, Geneva, sans-serif;">Feedback is appreciated :)</h3>
-						<input type="text" name="first" placeholder="First name" pattern="[a-zA-Z]+" required /><br> 
-						<input type="text" name="last" placeholder="Last name" pattern="[a-zA-Z]+" required /><br>
-						<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" required /><br>
-						<input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br><br>
-						<textarea name='comment' id='comment' placeholder="Comments?"></textarea><br>
-						<input class="submitkey" type="submit" value="Submit &rarr;" onclick="myFunction()">
+						<input type="text" name="first" id="first" placeholder="First name" pattern="[a-zA-Z]+" onchange = "this.form.elements['last'].disabled=false;" autofocus required /><br> 
+						<input type="text" name="last" id="last" placeholder="Last name" pattern="[a-zA-Z]+" onchange = "this.form.elements['phone'].disabled=false;" disabled required /><br>
+						<input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" onchange = "this.form.elements['email'].disabled=false;" disabled required /><br>
+						<input type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onchange = "this.form.elements['comment'].disabled=false;" disabled required /><br><br>
+						<textarea name='comment' id='comment' placeholder="Comments?" disabled></textarea><br>
+						<input class="submitkey" type="submit" value="Submit &rarr;" onclick = "submitForm()">
 					</div>
 				</form>
 			</section>
