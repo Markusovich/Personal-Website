@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Miscellaneous</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Simon Markus">
+		<meta name="keywords" content="Simon, Markus, website, miscellaneous">
+		<meta name="description" content="Simons' personal website and miscellaneous">
+		<link rel="stylesheet" href="style.css">
+		<script>
+		function submitForm() {
+  		var form = document.getElementById("formData");
+  		if (form.checkValidity() == true) {
+   			alert("Form has successfully submitted.");
+				var msg = document.getElementById("formData");
+				msg.outerHTML = "<h1>Thank you. Your feedback has been recorded :)</h1>";
+  		}
+		} 
+		</script>
+		<noscript>
+			<p style="color:white;">This web page uses JavaScript. For proper results, you must use a web browser with JavaScript enabled.</p>
+		</noscript>
+	</head>
+
+	<body class = "extra">
+
+		<header>
+			<nav>
+    		<ul>
+					<li><a href="index.htm">Home</a></li>
+					<li><a href="Code.html">Code</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+       		<li><a href="Travel.html">Travel</a></li>
+					<li><a href="Feedback.html" style="border: 3px solid white;">Feedback</a></li>
+    		</ul>
+			</nav>
+		</header>
+
+		<article>
+
+			<section>
+				<form id="formData" method="post">
+					<div class="photo">
+						<img src="img-01.png" alt="mailpic">
+					</div>
+					<div class="list">
+						<h3 style="color: black; font-family: Tahoma, Geneva, sans-serif;">Feedback is appreciated :)</h3>
+						<input type="text" name="first" id="first" placeholder="First name" pattern="[a-zA-Z]+" onchange = "this.form.elements['last'].disabled=false;" autofocus required /><br> 
+						<input type="text" name="last" id="last" placeholder="Last name" pattern="[a-zA-Z]+" onchange = "this.form.elements['phone'].disabled=false;" disabled required /><br>
+						<input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" onchange = "this.form.elements['email'].disabled=false;" disabled required /><br>
+						<input type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onchange = "this.form.elements['comment'].disabled=false;" disabled required /><br><br>
+						<textarea name='comment' id='comment' placeholder="Comments?" disabled></textarea><br>
+						<input class="submitkey" type="submit" value="Submit &rarr;" onclick = "submitForm()">
+					</div>
+				</form>
+			</section>
+
+			<section>
+				<h1>Music I study to</h1>
+					<div class="first">
+						<figure>
+							<figcaption>TrackTribe - Monument</figcaption>
+							<audio autoplay controls loop>
+								<source src="TrackTribe-Monument.mp3" type="audio/mp3">
+							</audio>
+						</figure>
+					</div>
+					<div class="second">
+						<figure>
+							<figcaption>Jernalism - Temptation</figcaption>
+							<audio autoplay controls loop>
+								<source src="Jernalism-Temptation.mp3" type="audio/mp3">
+							</audio>
+						</figure>
+					</div>
+					<div class="third">
+						<figure>
+							<figcaption>Hans Zimmer - Injection</figcaption>
+							<audio autoplay controls loop>
+								<source src="HansZimmer-Injection.mp3" type="audio/mp3">
+							</audio>
+						</figure>
+					</div>
+			</section>
+
+			<section class="videos">
+				<h1>Favorite Videos</h1>
+				<div>
+					<figure class="first">
+						<iframe width="600" height="300" src="https://www.youtube.com/embed/Y_9SwDFd_9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</figure>
+					<figure class="second">
+						<iframe width="600" height="300" src="https://www.youtube.com/embed/k9zTr2MAFRg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</figure>
+				</div>
+			</section>
+
+		</article>
+
+		<footer>
+    	<ul>
+      	<li><a href="mailto:simon.markus@siu.edu" target="_blank">email</a></li>
+				<li style="color:white;">&centerdot;</li>
+        <li><a href="https://github.com/markusovich" target="_blank">github</a></li>
+				<li style="color:white;">&centerdot;</li>
+				<li><a href="https://www.linkedin.com/in/simon-m-857b60190" target="_blank">linkedin</a></li>
+				<li style="color:white;">&centerdot;</li>
+				<li style="color:white; margin: 1px;">&copy; 2020 Simon Markus, SIUC.</li>
+			</ul>
+		</footer>
+	</body>
+
+</html>

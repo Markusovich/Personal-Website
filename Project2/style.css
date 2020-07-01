@@ -1,8 +1,25 @@
-			body {
+			body.home {
+    		margin: auto;
+        background: url(siuc.jpeg) no-repeat center center fixed;
+        background-size: cover;
+			}
+			body.code {
+				background-color: black;
+			}
+			body.schedule {
+    		margin: auto;
+        background: url(me.jpeg) no-repeat center center fixed;
+        background-size: cover;
+			}
+			body.travel {
     		margin: auto;
         background: url(wallpaper.jpg) no-repeat center center fixed;
         background-size: cover;
 			}
+			body.extra {
+				background-color: #303030;
+			}
+
 			header {
 				transition: 0.7s;
 				position: sticky;
@@ -10,12 +27,11 @@
 			}
 			header:hover {
 				background-color: black;
-				box-shadow: 0px 5px 10px black;
+				box-shadow: 10px 5px 10px 5px black;
 			}
 			header nav ul {
    			font-family:'Helvetica', 'Arial', 'Sans-Serif';
    	 		padding: 20px;
-				margin: 0px;
   	  	font-weight: bold;
   			display: flex;
   			justify-content: space-evenly;
@@ -52,17 +68,21 @@
 			}
 			article section aside img {
 				border-radius: 40px;
+				display: none;
 			}
 			article section h1 {
 				color: white;
     		font-size: 50px;
    		 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+				text-shadow: 2px 2px 4px #000000;
+				
 			}
 			article section p {
 				color: white;
    		  font-size: 20px;
 				font-family: Tahoma, Geneva, sans-serif;
    		  line-height: 40px;
+				text-shadow: 2px 2px 4px #000000;
 			}
 			article section.resume div p{
 				text-align: center;
@@ -70,7 +90,29 @@
    		  font-size: 20px;
 				font-family: Tahoma, Geneva, sans-serif;
    		  line-height: 40px;
-				margin-top: 75px;
+				margin-top: 130px;
+			}
+			article section.resume div a.resumedownload{
+				transition: 0.5s;
+				text-decoration: none;
+				padding: 3px;
+				border-radius: 10px;
+				background-color: LightSlateGrey;
+				border: none;
+			}
+			article section.resume div a.resumedownload:hover{
+				border: 3px solid LightSlateGrey;
+			}
+			article section.resume div a.resumedownload .left{
+				color: white;
+				font-weight: bold;
+				margin-left: 10px;
+			}
+			article section.resume div a.resumedownload .right{
+				color: green;
+				font-weight: thin;
+				margin-left: 5px;
+				margin-right: 10px;
 			}
 
 			article section.codeintro div p{
@@ -189,7 +231,7 @@
 				width: 400px;
 				width: 80%;
 				transition: 0.5s;
-				outline:none;
+				outline: none;
 			}
 			article section form input:hover{
 				width: 450px;
@@ -212,8 +254,8 @@
 
 			footer {
    			border-top: 1px solid white;
-				width: 80%;
-				margin: auto;
+				margin: 80px;
+				bottom: 0;
 			}
 			footer ul {
 				text-align: center;
