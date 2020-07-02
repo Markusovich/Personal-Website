@@ -19,6 +19,11 @@
 			body.extra {
 				background-color: #303030;
 			}
+			body.projectcode {
+    		margin: auto;
+        background: url(space.jpg) no-repeat center center fixed;
+        background-size: cover;
+			}
 
 			header {
 				transition: 0.7s;
@@ -117,7 +122,7 @@
 
 			article section.codeintro div p{
 				text-align: center;
-				padding-top: 1000px;
+				padding-top: 750px;
 			}
 			article section.codeintro div q{
 				font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -128,12 +133,69 @@
   			background-image: url("codingbackground.jpeg");
 				box-shadow: 0px 0px 70px 10px;
 
-  			min-height: 2000px;
+  			min-height: 1500px;
 
   			background-attachment: fixed;
   			background-position: center;
   			background-repeat: no-repeat;
   			background-size: cover;
+			}
+			article section.aboutme {
+				color: white;
+				padding-top: 50px;	
+				padding-bottom: 50px;
+			}
+			article section.aboutme div.personal cite{
+				font-size: 50px;
+				font-style: normal;
+				margin-left: 20px;
+			}
+			article section.aboutme div.message{
+				font-style: italic;
+				font-size: 30px;
+			}
+			article section.aboutme div.signature{
+				font-style: none;
+				text-align: center;
+			}
+			article section.codeintro2 div.projectTitle{
+				text-align: center;
+				padding-top: 100px;
+			}
+			section.codeintro2 {
+  			background-image: url("codingbackground.jpeg");
+				box-shadow: 0px 0px 70px 10px;
+
+  			min-height: 1000px;
+
+  			background-attachment: fixed;
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+			}
+			article section.codeintro2 div.projectLink p{
+				text-align: center;
+				font-weight: bold;
+				padding-top: 110px;
+				padding-bottom: 151px;
+        margin: auto;
+        background: url(7352.jpg) no-repeat center center fixed;
+        background-size: cover;
+				border-radius: 30px;
+			}
+			article section.codeintro2 div.projectLink a{
+				text-decoration: none;
+				display: block;
+    		width: 100%;
+				height: 300px;
+				border: 3px solid white;
+				border-radius: 30px;
+				margin-bottom: 60px;
+				transition: 0.5s;
+			}
+			article section.codeintro2 div.projectLink a:hover{
+				text-decoration: none;
+				border: 8px solid white;
 			}
 
 			.table{
