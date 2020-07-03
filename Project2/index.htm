@@ -8,6 +8,66 @@
 		<meta name="keywords" content="Simon, Markus, website, home, homepage">
 		<meta name="description" content="Simon Markus's homepage">
 		<link rel="stylesheet" href="style.css">
+		<script>
+
+			var bool = 0;
+
+			function startGame(){
+				bool = 1;
+				canvas = document.getElementById("canvas");
+				canvas.style.borderRadius = "25px";
+				canvas.style.border = "thin solid white";
+				var context = canvas.getContext("2d");
+				context.fillStyle = "black";
+				context.fillRect(0, 0, canvas.width, canvas.height);
+				context.fillStyle = "white";
+				context.font = "15px Apercu";
+				context.fillText("  Game: Click on as many spots before you ", 10, 13, 300);
+				context.fillText("get blown up by an invisible land mine! ", 10, 26, 300);
+
+			}
+
+			function captureClick(canvas, e){
+
+					if(bool == 1){
+						colors = new Array("red", "green", "blue", "orange", "yellow", "cyan", "pink");
+						radius = new Array(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+						width = new Array(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+						height = new Array(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+
+						var randColor = Math.floor(Math.random() * colors.length);
+						var randRadius = Math.floor(Math.random() * radius.length);
+						var randWidth = Math.floor(Math.random() * width.length);
+						var randHeight = Math.floor(Math.random() * height.length);
+						var randShape = Math.floor(Math.random() * 2) + 1;
+
+				 	 	var canvas = document.getElementById('canvas');
+						var rect = canvas.getBoundingClientRect();
+						var clientX = e.clientX;
+						var clientY = e.clientY;
+						var leftMargin = rect.left;
+						var topMargin = rect.top;
+
+  					if (canvas.getContext) {
+							var x = canvas.getContext('2d');
+							var xcoor = (clientX - leftMargin)-(randWidth/2);
+							var ycoor = (clientY - topMargin)-(randHeight/2);
+
+							if(randShape == 1){
+								x.fillStyle = colors[randColor];
+					  		x.fillRect(xcoor, ycoor, randWidth, randHeight);
+							}
+							else{
+								x.beginPath();
+								x.arc(xcoor, ycoor, radius[randRadius], 0, 2*Math.PI);
+								x.fillStyle = colors[randColor];
+								x.fill();
+							}
+  					}
+					}
+			}
+
+		</script>
 	</head>
 
 	<body class="home">
@@ -44,9 +104,21 @@
 				</div>
 			</section>
 
-			<section class="resume">
+			<section class="resume" style="background: rgba(0, 0, 0, .85); padding: 10px; border-radius: 50px; margin: 20px;">
 				<div>
 					<p>Resume as docx <a class="resumedownload" download href="2020ResumeSimonMarkus.docx"><span class="left">Download<span><span class="right"><img src="download.png" alt="download" height="30" width="30"><span></a></p>
+				</div>
+			</section>
+
+			<section class="game" style="background: rgba(0, 0, 0, .85); padding: 10px; border-radius: 50px; margin: 130px; display: flex; justify-content: center;">
+				<div>
+					<input type="button" value="Play!" onclick="startGame();">
+				</div>
+				<br>
+				<div>
+					<canvas id="canvas" onclick="captureClick(canvas, event);">
+						This required javascript.
+					</canvas>
 				</div>
 			</section>
 
