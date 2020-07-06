@@ -5,10 +5,11 @@
 				transition: 0.7s;
 				position: sticky;
 				top: 0;
+				padding-bottom: 5px;
 			}
 			header:hover {
 				background-color: black;
-				box-shadow: 10px 5px 10px 5px black;
+				border-radius: 0px 0px 50px 50px;
 			}
 			header nav ul {
    			font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -25,10 +26,6 @@
 				padding-left: 35px;
 				padding-right: 35px;
 				border-radius: 20px;
-			}
-			header nav ul a:hover {
-				filter: brightness(500%);
-				transition: 0.3s;
 			}
 			header nav ul li {
     		display: inline;
@@ -51,10 +48,10 @@
 				text-shadow: 2px 2px 4px #000000;
 			}
 			footer {
-   			border-top: 1px solid white;
-				margin: 80px;
-				padding-top: 20px;
-				bottom: 0;
+				margin-top: 200px;
+				padding-top: 15px;
+				padding-bottom: 120px;
+				background-color: black;
 			}
 			footer ul {
 				text-align: center;
@@ -63,17 +60,17 @@
     		display: inline;
     		margin-right: 2px;
 				margin-left: 2px;
-				font-size: 12px;
+				font-size: 13px;
 				font-weight: bold;
 				font-family:'Helvetica', 'Arial', 'Sans-Serif';
 			}
 			footer ul a {
    			text-decoration: none;
 				color: white;
+				transition: 0.3s;
 			}
 			footer ul a:hover {
 				opacity: 0.5;
-				transition: 0.3s;
 			}
 
 /* ================================== HOMEPAGE CODE =================================== */
@@ -94,6 +91,7 @@
     		margin-top: 6%;
     		color: white;
     		font-family: 'Century Gothic', sans-serif;
+				border-radius: 40px;
 			}
 			.box-img{
     		border-radius: 50%;
@@ -147,32 +145,9 @@
 				margin: 0;
 				padding: 0;
 			}
-			article section.codeSections nav ul {
-   			font-family:'Helvetica', 'Arial', 'Sans-Serif';
-   	 		padding: 20px;
-  	  	font-weight: bold;
-  			display: flex;
-  			justify-content: space-evenly;
-			}
-			article section.codeSections nav ul li a {
-				text-decoration: none;
-				color: white;
-				padding-top: 10px;
-				padding-bottom: 10px;
-				padding-left: 35px;
-				padding-right: 35px;
-				border-radius: 20px;
-			}
-			article section.codeSections nav ul a:hover {
-				filter: brightness(500%);
-				transition: 0.3s;
-			}
-			article section.codeSections nav ul li {
-    		display: inline;
-			}
 			article section.codeintro div p{
 				text-align: center;
-				padding-top: 750px;
+				padding-top: 260px;
 			}
 			article section.codeintro div q{
 				font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -181,9 +156,10 @@
 			}
 			article section.codeintro {
   			background-image: url("codingbackground.jpeg");
+				border-radius: 30px;
 				box-shadow: 0px 0px 70px 10px;
 
-  			min-height: 1500px;
+  			min-height: 700px;
 
   			background-attachment: fixed;
   			background-position: center;
@@ -192,7 +168,7 @@
 			}
 			article section.aboutme {
 				color: white;
-				padding-top: 50px;	
+				padding-top: 50px;
 				padding-bottom: 50px;
 			}
 			article section.aboutme div.personal cite{
@@ -214,6 +190,7 @@
 			}
 			section.codeintro2 {
   			background-image: url("codingbackground.jpeg");
+				border-radius: 30px;
 				box-shadow: 0px 0px 70px 10px;
 
   			min-height: 1000px;
