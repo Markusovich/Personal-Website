@@ -2,80 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <script src="https://kit.fontawesome.com/65913c67fd.js" crossorigin="anonymous"></script>
-
-		<script>
-
-			var bool = 0;
-
-			function startGame(){
-				bool = 1;
-				canvas = document.getElementById("canvas");
-				canvas.style.borderRadius = "25px";
-				canvas.style.border = "thin solid white";
-				var context = canvas.getContext("2d");
-				context.fillStyle = "black";
-				context.fillRect(0, 0, canvas.width, canvas.height);
-				context.fillStyle = "white";
-				context.font = "15px Apercu";
-				context.fillText("  Game: Click on as many spots before you ", 10, 13, 300);
-				context.fillText("get blown up by an invisible land mine! ", 10, 26, 300);
-
-			}
-
-			var numberOfClicks = 0;
-
-			function captureClick(canvas, e){
-
-					numberOfClicks++;
-
-					if(bool == 1){
-
-						e.stopPropagation();
-
-						colors = new Array("red", "green", "blue", "orange", "yellow", "cyan", "pink");
-
-						var randColor = Math.floor(Math.random() * colors.length);
-						var randRadius = Math.floor(Math.random() * 20) + 10;
-						var randWidth = Math.floor(Math.random() * 20) + 10;
-						var randHeight = Math.floor(Math.random() * 20) + 10;
-						var randShape = Math.floor(Math.random() * 2) + 1;
-
-				 	 	var canvas = document.getElementById('canvas');
-						var rect = canvas.getBoundingClientRect();
-						var clientX = e.clientX;
-						var clientY = e.clientY;
-						var leftMargin = rect.left;
-						var topMargin = rect.top;
-
-  					if (canvas.getContext) {
-							var x = canvas.getContext('2d');
-							var xcoor = (clientX - leftMargin)-(randWidth/2);
-							var ycoor = (clientY - topMargin)-(randHeight/2);
-
-							if(randShape == 1){
-								x.fillStyle = colors[randColor];
-					  		x.fillRect(xcoor, ycoor, randWidth, randHeight);
-							}
-							else{
-								x.beginPath();
-								x.arc(xcoor, ycoor, randRadius, 0, 2*Math.PI);
-								x.fillStyle = colors[randColor];
-								x.fill();
-							}
-  					}
-					}
-
-					if(numberOfClicks > 5){
-						startGame();
-						numberOfClicks = 0;
-					}
-
-			}
-
-		</script>
-
-        
+        <script src="https://kit.fontawesome.com/65913c67fd.js" crossorigin="anonymous"></script>        
         <link rel ="stylesheet" href="style.css">
         <title>Simon Markus Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,9 +13,8 @@
 			<header>
 				<nav>
     			<ul>
-						<li><a href="index.html" style="border: 3px solid white;">Home</a></li>
+						<li><a href="index.htm" style="border: 3px solid white;">Home</a></li>
 						<li><a href="Code.html">Code</a></li>
-						<li><a href="schedule.html">Schedule</a></li>
        			<li><a href="Travel.html">Travel</a></li>
 						<li><a href="Feedback.html">Feedback</a></li>
     			</ul>
@@ -106,18 +32,6 @@
             <li><a download href="2020ResumeSimonMarkus.docx"><i class="fas fa-newspaper" target="_blank"></i></a></li>
         </ul>
       </div>
-
-			<section class="game" style="background: rgba(0, 0, 0, .85); padding: 10px; border-radius: 50px; margin: 130px; display: flex; justify-content: center;">
-				<div>
-					<input type="button" value="Play!" onclick="startGame();">
-				</div>
-				<br>
-				<div>
-					<canvas id="canvas" onclick="captureClick(canvas, event);">
-						This requires javascript.
-					</canvas>
-				</div>
-			</section>
 
 		<footer>
     	<ul>

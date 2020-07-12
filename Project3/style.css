@@ -225,39 +225,6 @@
 				border: 8px solid white;
 			}
 
-/* =============================== SCHEDULE PAGE CODE ================================= */
-
-			body.schedule {
-    		margin: auto;
-        background: url(me.jpeg) no-repeat center center fixed;
-        background-size: cover;
-				margin: 0;
-				padding: 0;
-			}
-			article section.tableSection div table{
-				border: 3px solid white;
-				border-radius: 20px;
-				background-image: url(tablepic.jpeg);
-				margin: auto;
-				margin-bottom: 50px;
-				font-family:'Helvetica', 'Arial', 'Sans-Serif';
-			}
-			article section.tableSection div table td, th{
-				color: black;
-				padding: 10px;
-				text-align: center;
-			}
-			article section.tableSection div table td{
-				border: 1px solid white;
-				border-radius: 20px;
-				transition: 0.3s;
-			}
-			article section.tableSection div table td:hover{
-				border: 3px solid black;
-				font-weight: bold;
-				font-size: 20px;
-			}
-
 /* ================================ TRAVEL PAGE CODE ================================== */
 
 			body.travel {
@@ -346,20 +313,4 @@
 				color: white;
 				font-weight: bold;
 				margin: 5px;
-			}
-			article section.musicSection div.second{
-				display: flex;
-				justify-content: center;
-			}
-			article section.musicSection div.third{
-				float: right;
-			}
-			article section.musicSection div figure figcaption{
-				color: white;
-				font-size: 20px;
-				margin-bottom: 10px;
-				font-family: "Comic Sans MS", "cursive", "sans-serif";
-			}
-			article section.videos {
-				margin-top: 150px;
 			}
