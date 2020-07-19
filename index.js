@@ -72,15 +72,15 @@ app.post("/feedback", urlencodedParser, (req, res) => {
     var mailOptions1 = {
         from: 'simon.markus9@gmail.com',
         to: info.email,
-        subject: 'From Simons Personal Website',
-        text: '\nDear ' + info.first + ' ' + info.last + ', thank you for your feedback! - from my personal website. \n\n\n\nSimon Markus\nPhone: 217-480-5323'
+        subject: 'Simon Personal Website',
+        text: '(automated message)\n\nDear ' + info.first + ' ' + info.last + ', thank you for your feedback! \n\nSimon@' + 'https://simon-website.herokuapp.com/' + '\n\n\n\nSimon Markus\n217-480-5323\n'
     };
 
     var mailOptions2 = {
         from: 'simon.markus9@gmail.com',
         to: 'simon.markus9@gmail.com',
-        subject: 'New Visitor Feedback',
-        text: '\n' + info.first + ' ' + info.last + ' (' + info.phone + ') left a comment on your website: \n\n\t"' + info.comment + '"'
+        subject: 'Website Feedback From ' + info.first + ' ' + info.last,
+        text: '\n' + info.first + ' ' + info.last + ' (' + info.email + ' ' + info.phone + ') left a comment on your website: \n\n\t"' + info.comment + '"'
     };
     
     transporter.sendMail(mailOptions1, function(error, info) {
