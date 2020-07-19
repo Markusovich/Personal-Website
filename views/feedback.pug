@@ -42,7 +42,7 @@ div.View.extra
           br
           input#last(type='text' name='last' placeholder='Last name' pattern='[a-zA-Z]+' onchange="this.form.elements['phone'].disabled=false;" disabled='' required='')
           br
-          input#phone(type='tel' name='phone' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' placeholder='xxx-xxx-xxxx' onchange="this.form.elements['email'].disabled=false;" disabled='' required='')
+          input#phone(type='tel' name='phone' pattern='[0-9]{10}' placeholder='XXXXXXXXXX' onchange="this.form.elements['email'].disabled=false;" disabled='' required='')
           br
           input#email(type='email' name='email' placeholder='Email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' onchange="this.form.elements['comment'].disabled=false;" disabled='' required='')
           br
