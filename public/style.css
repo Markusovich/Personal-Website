@@ -1,0 +1,315 @@
+
+/* ================================= UNIVERSAL CODE ================================== */
+
+			body { margin: 0; }
+			header {
+				transition: 0.7s;
+				position: sticky;
+				top: 0;
+				padding-bottom: 5px;
+			}
+			header:hover {
+				background-color: black;
+				border-radius: 0px 0px 50px 50px;
+			}
+			header nav ul {
+   			font-family:'Helvetica', 'Arial', 'Sans-Serif';
+   	 		padding: 20px;
+  	  		font-weight: bold;
+  			display: flex;
+  			justify-content: space-evenly;
+			}
+			header nav ul li a {
+				text-decoration: none;
+				color: white;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 35px;
+				padding-right: 35px;
+				border-radius: 20px;
+			}
+			header nav ul li {
+    		display: inline;
+			}
+			article {
+				width: 80%;
+				margin: auto;
+			}
+			article section h1 {
+				color: white;
+    		font-size: 50px;
+   		 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+				text-shadow: 2px 2px 4px #000000;
+			}
+			article section p {
+				color: white;
+   		  font-size: 20px;
+				font-family: Tahoma, Geneva, sans-serif;
+   		  line-height: 40px;
+				text-shadow: 2px 2px 4px #000000;
+			}
+			footer {
+				margin-top: 200px;
+				padding-top: 15px;
+				padding-bottom: 120px;
+				background-color: black;
+			}
+			footer ul {
+				text-align: center;
+			}
+			footer ul li {
+    		display: inline;
+    		margin-right: 15px;
+				margin-left: 15px;
+				font-size: 12px;
+				font-weight: bold;
+				font-family:'Helvetica', 'Arial', 'Sans-Serif';
+			}
+			footer ul a {
+   			text-decoration: none;
+				color: white;
+				transition: 0.3s;
+			}
+			footer ul a:hover {
+				opacity: 0.5;
+			}
+
+/* ================================== HOMEPAGE CODE =================================== */
+
+			.home {
+        		background: url(desktopwallpaper.jpg) no-repeat center center fixed;
+        		background-size: cover;
+			}
+			.box{
+    		width: 400px;
+    		background: rgba(19,41,75,0.4);
+    		padding: 40px;
+    		backdrop-filter: blur(3px);
+    		text-align: center;
+    		margin: auto;
+    		margin-top: 6%;
+    		color: white;
+    		font-family: 'Century Gothic', sans-serif;
+				border-radius: 40px;
+			}
+			.box-img{
+    		border-radius: 50%;
+    		width: 200px;
+    		height: 200px;
+			}
+			.box h1{
+    		font-size: 40px;
+    		letter-spacing: 4px;
+    		font-weight: 100;
+			}
+			.box h5{
+    		font-size: 20px;
+    		letter-spacing: 3px;
+    		font-weight: 100;
+			}
+			.box p{
+    		text-align: justify;
+				margin-bottom: 50px;
+			}
+			ul{
+    		margin: 0;
+    		padding: 0;
+			}
+			.box li{
+    		display: inline-block;
+    		margin: 6px;
+    		list-style: none;
+			}
+			.box li a{
+    		color: white;
+    		text-decoration: none;
+    		font-size: 50px;
+    		transition: all ease-in-out 250;
+			}
+			.box li a:hover{
+    		color: rgba(233,74,39,1);
+			}
+
+/* ================================= CODE PAGE CODE =================================== */
+
+			.code {
+				background-color: black;
+				margin: 0;
+				padding: 0; 
+			}
+			.projectcode {
+    		margin: auto;
+        		background: url(space.jpg) no-repeat center center fixed;
+        		background-size: cover;
+				margin: 0;
+				padding: 0;
+			}
+			article section.codeintro div p{
+				text-align: center;
+				padding-top: 260px;
+			}
+			article section.codeintro div q{
+				font-family:'Helvetica', 'Arial', 'Sans-Serif';
+				font-size: 50px;
+				font-weight: bold;
+			}
+			article section.codeintro {
+  				background-image: url("codingbackground.jpeg");
+				border-radius: 30px;
+				box-shadow: 0px 0px 70px 10px;
+
+  			min-height: 700px;
+
+  			background-attachment: fixed;
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+			}
+			article section.aboutme {
+				color: white;
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+			article section.aboutme div.personal cite{
+				font-size: 50px;
+				font-style: normal;
+				margin-left: 20px;
+			}
+			article section.aboutme div.message{
+				font-style: italic;
+				font-size: 30px;
+			}
+			article section.aboutme div.signature{
+				font-style: none;
+				text-align: center;
+			}
+			article section.codeintro2 div.projectTitle{
+				text-align: center;
+				padding-top: 100px;
+			}
+			section.codeintro2 {
+  				background-image: url("codingbackground.jpeg");
+				border-radius: 30px;
+				box-shadow: 0px 0px 70px 10px;
+
+  			min-height: 1000px;
+
+  			background-attachment: fixed;
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+			}
+			article section.codeintro2 div.projectLink p{
+				text-align: center;
+				font-weight: bold;
+				padding-top: 110px;
+				padding-bottom: 151px;
+        		margin: auto;
+        		background: url(7352.jpg) no-repeat center center fixed;
+        		background-size: cover;
+				border-radius: 30px;
+			}
+			article section.codeintro2 div.projectLink a{
+				text-decoration: none;
+				display: block;
+    			width: 100%;
+				height: 300px;
+				border: 3px solid white;
+				border-radius: 30px;
+				margin-bottom: 60px;
+				transition: 0.5s;
+			}
+			article section.codeintro2 div.projectLink a:hover{
+				text-decoration: none;
+				border: 8px solid white;
+			}
+
+/* ================================ TRAVEL PAGE CODE ================================== */
+
+			.travel {
+    			margin: auto;
+        		background: url(wallpaper.jpg) no-repeat center center fixed;
+        		background-size: cover;
+				margin: 0;
+				padding: 0;
+			}
+			.table{
+				display: table;
+				margin-bottom: 100px;
+				margin-left: 300px;
+				margin-right: 300px;
+			}
+			.caption{
+				display: table-caption;
+				text-align: center;
+			}
+			.row{
+				display: table-row;
+			}
+			.row *{
+				color: white;
+				display: table-cell;
+				vertical-align: middle;
+				margin-left: 10px;
+				margin-bottom: 30px;
+				font-family: Comic Sans MS, Comic Sans, cursive;
+				border-radius: 20px;
+			}
+
+/* =============================== FEEDBACK PAGE CODE ================================= */
+
+			.extra {
+				background-color: #303030;
+				margin: 0;
+				padding: 0;
+			}
+			article section.formSection form{
+				background-color: white;
+				color: white;
+				border-radius: 10px;
+				padding: 50px;
+				padding-top: 30px;
+				text-align: center;
+				margin: auto;
+				margin-top: 100px;
+				margin-bottom: 100px;
+				width: 70%;
+			}
+			article section.formSection form div.photo{
+				float: left;
+				margin-top: 80px;
+			}
+			article section.formSection form div.list{
+				padding-left: 350px;
+			}
+			article section.formSection form input, textarea{
+				border-radius: 20px;
+				border: none;
+				font-weight: bold;
+				background-color: lightgrey;
+				padding: 10px;
+				margin: 5px;
+				font-family: Tahoma, Geneva, sans-serif;
+				width: 400px;
+				width: 80%;
+				transition: 0.5s;
+				outline: none;
+			}
+			article section.formSection form input:hover{
+				width: 450px;
+			}
+			article section.formSection form textarea:hover{
+				width: 450px;
+			}
+			article section.formSection form textarea{
+				height: 150px;
+			}
+			article section.formSection form .submitkey{
+				border-radius: 20px;
+				border: none;
+				background-color: #00a000;
+				padding: 15px;
+				color: white;
+				font-weight: bold;
+				margin: 5px;
+			}

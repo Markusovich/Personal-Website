@@ -1,0 +1,65 @@
+div.View.travel
+
+  doctype html
+  head
+    title Travel
+    meta(charset='utf-8')
+    meta(name='author' content='Simon Markus')
+    meta(name='keywords' content='Simon, Markus, website, travel, photos')
+    meta(name='description' content="Simons' personal website and photos")
+    link(rel='stylesheet' href='style.css' type='text/css')
+  header
+    nav
+      ul
+        li
+          a(href='index') Home
+        li
+          a(href='code') Code
+        li
+          a(href='travel' style='border: 3px solid white;') Travel
+        li
+          a(href='feedback') Feedback
+  article
+    section.table
+      h1.caption Travels &apos;n stuff
+      p
+        | This page is dedicated to my travels around the world. I share a few pictures of the scenery that caught my eye, as well as a brief description of it.
+      .row
+        span
+          | During my time in Frankfurt, I often took long walks in the city. Pictured right is the style of the buildings. Notice the difference in building design compared to the United States.
+        span
+          a(href='germany.jpeg' target='_blank')
+            img(src='germany.jpeg' alt='Frankfurt' width='200' height='300')
+      .row
+        span
+          a(href='colorado.jpeg' target='_blank')
+            img(src='colorado.jpeg' alt='Colorado' width='300' height='200')
+        span
+          | Summer in Colorado can be a very great time. During my time in Colorado, I took this picture of a rocky hill. The closer you get to the &apos;wild west&apos;, the more you see dry hills. This is because the climate is different than the east coasts&apos;
+      .row
+        span
+          | During my time in Serbia, I went to the capital city Belgrade. One particular thing that I enjoyed was learning about the historic fortresses. The wall pictured right was built in 259 BC and is still standing.
+        span
+          a(href='IMG_1503.jpeg' target='_blank')
+            img(src='IMG_1503.jpeg' alt='Fortress' width='300' height='200')
+      .row
+        span
+          a(href='IMG_1499.jpeg' target='_blank')
+            img(src='IMG_1499.jpeg' alt='Castle' width='300' height='200')
+        span
+          | Just like the previous caption, this castle has been up for over 2,000 years. Pictured is my brother (L) and me (R).
+      .row
+        span
+          | Last but not least, what better vacation is there than a walk around the SIUC campus lake?
+        span
+          a(href='siuclake.jpeg' target='_blank')
+            img(src='siuclake.jpeg' alt='Castle' width='300' height='200')
+  footer
+    ul
+      li
+        a(href='mailto:simon.markus@siu.edu' target='_blank') email
+      li
+        a(href='https://github.com/markusovich' target='_blank') github
+      li
+        a(href='https://www.linkedin.com/in/simon-m-857b60190' target='_blank') linkedin
+      li(style='color:white; margin: 1px;') &copy; 2020 Simon Markus, SIUC.
