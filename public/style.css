@@ -146,6 +146,7 @@
 			}
 			article section.codeintro div p{
 				text-align: center;
+				line-height: 60px;
 				padding-top: 260px;
 			}
 			article section.codeintro div q{

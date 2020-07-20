@@ -38,16 +38,16 @@ div.View.extra
           img(src='img-01.png' alt='mailpic')
         .list
           h3(style='color: black; font-family: Tahoma, Geneva, sans-serif;') Feedback is appreciated :)
-          input#first(type='text' name='first' placeholder='First name' pattern='[a-zA-Z]+' onchange="this.form.elements['last'].disabled=false;" autofocus='' required='')
+          input#first(type='text' name='first' placeholder='First name' pattern='[a-zA-Z]+' autofocus='' required='')
           br
-          input#last(type='text' name='last' placeholder='Last name' pattern='[a-zA-Z]+' onchange="this.form.elements['phone'].disabled=false;" disabled='' required='')
+          input#last(type='text' name='last' placeholder='Last name' pattern='[a-zA-Z]+' required='')
           br
-          input#phone(type='tel' name='phone' pattern='[0-9]{10}' placeholder='XXXXXXXXXX' onchange="this.form.elements['email'].disabled=false;" disabled='' required='')
+          input#phone(type='tel' name='phone' pattern='[0-9]{10}' placeholder='10 digit phone number, no spaces' required='')
           br
-          input#email(type='email' name='email' placeholder='Email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' onchange="this.form.elements['comment'].disabled=false;" disabled='' required='')
+          input#email(type='email' name='email' placeholder='Email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' required='')
           br
           br
-          textarea#comment(name='comment' placeholder='Comments?' disabled='' required='')
+          textarea#comment(name='comment' placeholder='Comment' required='')
           br
           input.submitkey(type='submit' value='Submit →' onclick='submitForm()')
   footer
