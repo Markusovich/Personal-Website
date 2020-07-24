@@ -16,7 +16,7 @@ app.get("/index.htm", function(req, res){
     res.sendFile(__dirname + "/views/index.htm");
 });
 app.get("/Code.html", function(req, res){
-    res.sendFile(__dirname + "/views/code.html");
+    res.sendFile(__dirname + "/views/Code.html");
 });
 app.get("/personalWebsite.html", function(req, res){
     res.sendFile(__dirname + "/views/personalWebsite.html");
@@ -24,8 +24,8 @@ app.get("/personalWebsite.html", function(req, res){
 app.get("/foodmachineSoftware.html", function(req, res){
     res.sendFile(__dirname + "/views/foodmachineSoftware.html");
 });
-app.get("/covid19Prioritzer.html", function(req, res){
-    res.sendFile(__dirname + "/views/covid19Prioritzer.html");
+app.get("/covid19Prioritizer.html", function(req, res){
+    res.sendFile(__dirname + "/views/covid19Prioritizer.html");
 });
 app.get("/dataTree.html", function(req, res){
     res.sendFile(__dirname + "/views/dataTree.html");
