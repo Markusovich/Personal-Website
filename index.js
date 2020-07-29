@@ -48,55 +48,43 @@ app.post("/submit", urlencodedParser, function(req, res){
     }
 
     const { MongoClient } = require("mongodb");
- 
-    // Replace the following with your Atlas connection string                                                                                                                                        
-    const url = "mongodb+srv://markusovich:Alexmom99@cluster0.enna3.mongodb.net/websiteDatabase?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true";
-    const client = new MongoClient(url);
-
-    // The database to use
-    const dbName = "websiteDatabase";
+    const client = new MongoClient("mongodb+srv://markusovich:Alexmom99@cluster0.enna3.mongodb.net/websiteDatabase?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true");
 
     async function run() {
         try {
             await client.connect();
 
-            const db = client.db(dbName);
+            const db = client.db("websiteDatabase");
    
-            // Use the collection "feedback"
-            const col = db.collection("feedback");
+            const collection = db.collection("feedback");
 
-            var ifExists = col.countDocuments({phone: info.phone, first: info.first, last: info.last}, { limit: 1 });
-            ifExists.then(function(value) {
-                if(value == 1){
-                    res.sendFile(__dirname + "/views/PostFeedbackReturn.html");
-                }
-                else{
-                    res.sendFile(__dirname + "/views/PostFeedback.html");
+            var ifExists = await collection.countDocuments({phone: info.phone, first: info.first, last: info.last}, { limit: 1 });
+            if(ifExists == 1){
+                res.sendFile(__dirname + "/views/PostFeedbackReturn.html");
+            }
+            else{
+                res.sendFile(__dirname + "/views/PostFeedback.html");
+            }
+   
+            await collection.insertOne(info);
+
+            var num = await collection.estimatedDocumentCount();
+            var transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user: 'markusovichcodes@gmail.com', 
+                    pass: 'Alexmom99'
                 }
             });
-   
-            // Insert a single document, wait for promise so we can read it back
-            const p = await col.insertOne(info);
-
-            var num = col.estimatedDocumentCount();
-            num.then(function(value) {
         
-                var transporter = nodemailer.createTransport({
-                    service: 'gmail',
-                    auth: {
-                        user: 'markusovichcodes@gmail.com', 
-                        pass: 'Alexmom99'
-                    }
-                });
-        
-                var mailOptions1 = {
-                    from: 'markusovichcodes@gmail.com',
-                    to: info.email,
-                    subject: 'Thanks for visiting my website! - Simon Markus',
-                    text: `(automated message powered by nodemailer)
+            var mailOptions1 = {
+                from: 'markusovichcodes@gmail.com',
+                to: info.email,
+                subject: 'Thanks for visiting my website! - Simon Markus',
+                text: `(automated message powered by nodemailer)
     
 Dear ${info.first} ${info.last}, thank you for your feedback!
-Your submission is the ${value}th recorded.
+Your submission is the ${num}th recorded.
             
 Simon Markus @ https://simon-website.herokuapp.com/
             
@@ -107,36 +95,19 @@ Simon Markus
 simon.markus9@gmail.com
 217-480-5323
 `
-                };
+            };
     
-                var mailOptions2 = {
-                    from: 'markusovichcodes@gmail.com',
-                    to: 'markusovichcodes@gmail.com',
-                    subject: 'Website Feedback From ' + info.first + ' ' + info.last,
-                    text: `${info.first} ${info.last} (${info.email} - ${info.phone}) left a comment on your website: 
+            var mailOptions2 = {
+                from: 'markusovichcodes@gmail.com',
+                to: 'markusovichcodes@gmail.com',
+                subject: 'Website Feedback From ' + info.first + ' ' + info.last,
+                text: `${info.first} ${info.last} (${info.email} - ${info.phone}) left a comment on your website: 
     
             "${info.comment}"`
-                };
+            };
         
-                transporter.sendMail(mailOptions1, function(error, info) {
-                    if(error){
-                        console.log(error);
-                    }
-                    else{
-                        console.log('Email sent: ' + info.response);
-                    }
-                });
-    
-                transporter.sendMail(mailOptions2, function(error, info) {
-                    if(error){
-                        console.log(error);
-                    }
-                    else{
-                        console.log('Email sent: ' + info.response);
-                    }
-                });
-        
-            });
+            transporter.sendMail(mailOptions1);
+            transporter.sendMail(mailOptions2);
 
         } catch (err) {
             console.log(err.stack);
@@ -147,91 +118,6 @@ simon.markus9@gmail.com
     }
 
     run().catch(console.dir);
-
-    /*
-
-    const MongoClient = require('mongodb').MongoClient;
-    const uri = "mongodb+srv://markusovich:Alexmom99@cluster0.enna3.mongodb.net/websiteDatabase?retryWrites=true&w=majority";
-    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    client.connect(err => {
-
-        const collection = client.db("websiteDatabase").collection("feedback");
-
-        var ifExists = collection.countDocuments({phone: info.phone, first: info.first, last: info.last}, { limit: 1 });
-        ifExists.then(function(value) {
-            if(value == 1){
-                res.sendFile(__dirname + "/views/PostFeedbackReturn.html");
-            }
-            else{
-                res.sendFile(__dirname + "/views/PostFeedback.html");
-            }
-        });
-
-        collection.insertOne(info);
-
-        var num = collection.estimatedDocumentCount();
-        num.then(function(value) {
-    
-            var transporter = nodemailer.createTransport({
-                service: 'gmail',
-                auth: {
-                    user: 'markusovichcodes@gmail.com', 
-                    pass: 'Alexmom99'
-                }
-            });
-    
-            var mailOptions1 = {
-                from: 'markusovichcodes@gmail.com',
-                to: info.email,
-                subject: 'Thanks for visiting my website! - Simon Markus',
-                text: `(automated message powered by nodemailer)
-
-Dear ${info.first} ${info.last}, thank you for your feedback!
-Your submission is the ${value+1}th recorded.
-        
-Simon Markus @ https://simon-website.herokuapp.com/
-        
-        
-        
-Contact:
-Simon Markus
-simon.markus9@gmail.com
-217-480-5323
-`
-            };
-
-            var mailOptions2 = {
-                from: 'markusovichcodes@gmail.com',
-                to: 'markusovichcodes@gmail.com',
-                subject: 'Website Feedback From ' + info.first + ' ' + info.last,
-                text: `${info.first} ${info.last} (${info.email} - ${info.phone}) left a comment on your website: 
-
-	    "${info.comment}"`
-            };
-    
-            transporter.sendMail(mailOptions1, function(error, info) {
-                if(error){
-                    console.log(error);
-                }
-                else{
-                    console.log('Email sent: ' + info.response);
-                }
-            });
-
-            transporter.sendMail(mailOptions2, function(error, info) {
-                if(error){
-                    console.log(error);
-                }
-                else{
-                    console.log('Email sent: ' + info.response);
-                }
-            });
-    
-        });
-    });
-    client.close();
-
-    */
 
 });
 
