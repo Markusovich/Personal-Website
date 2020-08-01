@@ -8,6 +8,7 @@
 		<meta name="keywords" content="Simon, Markus, website, feedback">
 		<meta name="description" content="Simons' personal website and miscellaneous">
 		<link rel="stylesheet" href="style.css" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 		<script>
 		function submitForm() {
   		var form = document.getElementById("formData");
@@ -15,6 +16,13 @@
    			alert("Email sent to email address specified.");
   		}
 		} 
+		</script>
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope) {
+				$scope.first= "Joe";
+				$scope.last= "Schmo";
+			});
 		</script>
 		<noscript>
 			<p style="color:white;">This web page uses JavaScript. For proper results, you must use a web browser with JavaScript enabled.</p>
@@ -28,7 +36,7 @@
     		<ul>
 					<li><a href="index.htm">Home</a></li>
 					<li><a href="Code.html">Code</a></li>
-       		<li><a href="Travel.html">Travel</a></li>
+       				<li><a href="Travel.html">Travel</a></li>
 					<li><a href="Feedback.html" style="border: 3px solid white;">Feedback</a></li>
     		</ul>
 			</nav>
@@ -42,12 +50,13 @@
 					<div class="photo">
 						<img src="img-01.png" alt="mailpic">
 					</div>
-					<div class="list">
+					<div class="list" ng-app="myApp" ng-controller="myCtrl">
 						<h3 style="color: black; font-family: Tahoma, Geneva, sans-serif;">Feedback is appreciated :)</h3>
-						<input type="text" name="first" id="first" placeholder="First name" pattern="[a-zA-Z]+" autofocus required /><br> 
-						<input type="text" name="last" id="last" placeholder="Last name" pattern="[a-zA-Z]+" required /><br>
+						<input type="text" ng-model="first" name="first" id="first" placeholder="First name" pattern="[a-zA-Z]+" autofocus required /><br> 
+						<input type="text" ng-model="last" name="last" id="last" placeholder="Last name" pattern="[a-zA-Z]+" required /><br>
 						<input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="10 digit phone number" required /><br>
 						<input type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br><br>
+						<p style="color:black; text-shadow: none; font-family:'Lucida Console', monospace;">Welcome, {{first + ' ' + last}}!</p><br>
 						<textarea name='comment' id='comment' placeholder="Comment"></textarea><br>
 						<input class="submitkey" type="submit" value="Submit &rarr;" onclick = "submitForm()">
 					</div>
