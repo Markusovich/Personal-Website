@@ -8,3 +8,5 @@ Personal website.
   Nodejs and Expressjs used as server side work.
   
   MongoDB database keeps record of all feedback form submissions.
+  
+  A dash of angular.
