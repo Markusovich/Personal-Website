@@ -12,16 +12,16 @@
 		<script>
 		function submitForm() {
   		var form = document.getElementById("formData");
-  		if (form.checkValidity() == true) {
-   			alert("Email sent to email address specified.");
-  		}
+  			if (form.checkValidity() == true) {
+   				alert("Email sent to email address specified.");
+  			}
 		} 
 		</script>
 		<script>
 			var app = angular.module('myApp', []);
 			app.controller('myCtrl', function($scope) {
-				$scope.first= "Joe";
-				$scope.last= "Schmo";
+				$scope.first= "John";
+				$scope.last= "Smith";
 			});
 		</script>
 		<noscript>

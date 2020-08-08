@@ -139,7 +139,7 @@
 			}
 			.projectcode {
     		margin: auto;
-        		background: url(space.jpg) no-repeat center center fixed;
+        		background: url(forest.jpg) no-repeat center center fixed;
         		background-size: cover;
 				margin: 0;
 				padding: 0;
@@ -223,6 +223,105 @@
 			article section.codeintro2 div.projectLink a:hover{
 				text-decoration: none;
 				border: 8px solid white;
+			}
+
+/* ================================ PERSONAL WEBSITE PAGE ================================== */
+
+			article section.title div {
+				text-align: center;
+			}
+			article section.content div.about {
+				border: 1px solid black;
+				background-color: black;
+				border-radius: 30px 30px 0px 0px;
+				padding-left: 40px;
+			}
+			article section.content div.aboutdesc {
+				transition: 0.5s;
+				padding: 50px;
+				text-align: center;
+				border-radius: 0px 0px 30px 30px;
+				margin-bottom: 100px;
+				backdrop-filter: blur(3px);
+			}
+			article section.content div.htmlcss {
+				border: 1px solid black;
+				background-color: black;
+				border-radius: 30px 30px 0px 0px;
+				padding-right: 40px;
+				text-align: right;
+			}
+			article section.content div.htmlcssdesc {
+				transition: 0.5s;
+				padding: 50px;
+				text-align: center;
+				border-radius: 0px 0px 30px 30px;
+				margin-bottom: 100px;
+				backdrop-filter: blur(3px);
+			}
+			article section.content div.javascript {
+				border: 1px solid black;
+				background-color: black;
+				border-radius: 30px 30px 0px 0px;
+				padding-left: 40px;
+				text-align: left;
+			}
+			article section.content div.javascriptdesc {
+				transition: 0.5s;
+				padding: 50px;
+				text-align: center;
+				border-radius: 0px 0px 30px 30px;
+				margin-bottom: 100px;
+				backdrop-filter: blur(3px);
+			}
+			article section.content div.nodeexpress {
+				border: 1px solid black;
+				background-color: black;
+				border-radius: 30px 30px 0px 0px;
+				padding-right: 40px;
+				text-align: right;
+			}
+			article section.content div.nodeexpressdesc {
+				transition: 0.5s;
+				padding: 50px;
+				text-align: center;
+				border-radius: 0px 0px 30px 30px;
+				margin-bottom: 100px;
+				backdrop-filter: blur(3px);
+			}
+			article section.content div.mongo {
+				border: 1px solid black;
+				background-color: black;
+				border-radius: 30px 30px 0px 0px;
+				padding-left: 40px;
+				text-align: left;
+			}
+			article section.content div.mongodesc {
+				transition: 0.5s;
+				padding: 50px;
+				text-align: center;
+				border-radius: 0px 0px 30px 30px;
+				margin-bottom: 100px;
+				backdrop-filter: blur(3px);
+			}
+			article section.content div.angular {
+				border: 1px solid black;
+				background-color: black;
+				border-radius: 30px 30px 0px 0px;
+				padding-right: 40px;
+				text-align: right;
+			}
+			article section.content div.angulardesc {
+				transition: 0.5s;
+				padding: 50px;
+				text-align: center;
+				border-radius: 0px 0px 30px 30px;
+				margin-bottom: 100px;
+				backdrop-filter: blur(3px);
+			}
+			div.aboutdesc:hover, div.htmlcssdesc:hover, div.javascriptdesc:hover,
+			div.nodeexpressdesc:hover, div.mongodesc:hover, div.angulardesc:hover{
+				border: 3px solid white;
 			}
 
 /* ================================ TRAVEL PAGE CODE ================================== */
