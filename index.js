@@ -15,20 +15,14 @@ app.get("/", function(req, res){
 app.get("/index.htm", function(req, res){
     res.sendFile(__dirname + "/views/index.htm");
 });
-app.get("/Code.html", function(req, res){
-    res.sendFile(__dirname + "/views/Code.html");
+app.get("/Work.html", function(req, res){
+    res.sendFile(__dirname + "/views/Work.html");
 });
 app.get("/personalWebsite.html", function(req, res){
     res.sendFile(__dirname + "/views/personalWebsite.html");
 });
-app.get("/foodmachineSoftware.html", function(req, res){
-    res.sendFile(__dirname + "/views/foodmachineSoftware.html");
-});
-app.get("/covid19Prioritizer.html", function(req, res){
-    res.sendFile(__dirname + "/views/covid19Prioritizer.html");
-});
-app.get("/dataTree.html", function(req, res){
-    res.sendFile(__dirname + "/views/dataTree.html");
+app.get("/EDA.html", function(req, res){
+    res.sendFile(__dirname + "/views/EDA.html");
 });
 app.get("/Travel.html", function(req, res){
     res.sendFile(__dirname + "/views/Travel.html");
